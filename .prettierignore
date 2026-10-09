@@ -1,0 +1,9 @@
+node_modules
+doc_build
+package-lock.json
+**/.vitepress
+**/public/**
+*.svg
+*.png
+*.jpg
+*.ico

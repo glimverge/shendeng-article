@@ -21,3 +21,8 @@
 - Web 资源放在 `docs/public/`（勿提交 `.ai` / `.cdr` 源文件）
 - 导航 Logo：`logo-full-transparent.svg`；站点 icon：`logo-full-transparent.ico`
 
+## Markdown 格式
+
+- 使用 **Prettier** 格式化 Markdown（`proseWrap: preserve`，避免重排中文段落）
+- 本地检查：`npm run fmt:check`；本地修复：`npm run fmt`
+- CI：`.github/workflows/markdown-format.yml` 会在 push/PR 时自动格式化；同仓库分支有改动时会提交 `style: format markdown`

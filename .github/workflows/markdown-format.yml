@@ -1,0 +1,79 @@
+# Check and auto-fix Markdown with Prettier
+name: Format Markdown
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.md'
+      - '**.mdx'
+      - '.prettierrc'
+      - '.prettierignore'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/markdown-format.yml'
+  pull_request:
+    paths:
+      - '**.md'
+      - '**.mdx'
+      - '.prettierrc'
+      - '.prettierignore'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/markdown-format.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: markdown-format-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          # On PRs, check out the head branch so formatting commits land on the PR
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Setup Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Format Markdown
+        run: npm run fmt
+
+      - name: Commit and push fixes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- '*.md' '*.mdx')" ]; then
+            echo "Markdown already formatted."
+            exit 0
+          fi
+
+          # Fork PRs cannot be pushed with GITHUB_TOKEN; fail with the diff instead.
+          if [ "$EVENT_NAME" = "pull_request" ] && [ "$PR_HEAD_REPO" != "$REPO" ]; then
+            echo "Fork PR has unformatted Markdown. Please run: npm run fmt"
+            git --no-pager diff -- '*.md' '*.mdx'
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.md' '*.mdx'
+          git commit -m "style: format markdown"
+          git push
