@@ -21,9 +21,10 @@
 - Web 资源放在 `docs/public/`（勿提交 `.ai` / `.cdr` 源文件）
 - 导航 Logo：`logo-full-transparent.svg`；站点 icon：`logo-full-transparent.ico`
 
-## Markdown 格式
+## 代码格式（Oxfmt）
 
-- 使用 **Prettier** 格式化 Markdown（`proseWrap: preserve`，避免重排中文段落）
+- 使用 **Oxfmt**（`oxfmt`）格式化项目文件：Markdown / TypeScript / JavaScript / JSON / YAML 等（勿再引入 Prettier）
+- 配置：`.oxfmtrc.json`（`proseWrap: preserve`，避免重排中文段落；忽略 `doc_build`、`docs/public`、`.agents`、`.workbuddy` 等）
 - 本地检查：`npm run fmt:check`；本地修复：`npm run fmt`
 - CI：`.github/workflows/autofix.yml`（**workflow 名必须是 `autofix.ci`**）在 push/PR 时跑 `npm run fmt`，再由 [autofix.ci](https://autofix.ci/) App 把修复推回分支
 - 组织已安装 autofix.ci GitHub App；不要再手写 `git commit` / `git push` 做格式修复
