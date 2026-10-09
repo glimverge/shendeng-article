@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/glimverge/shendeng-article/issues"
   },
-  "homepage": "https://glimverge.github.io/shendeng-article/",
+  "homepage": "https://blog.glimverge.com/",
   "devDependencies": {
     "@rspress/core": "^2.0.23"
   }

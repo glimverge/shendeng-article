@@ -5,7 +5,7 @@ export default defineConfig({
   title: '神灯',
   description: '神灯文章',
   lang: 'zh',
-  siteOrigin: 'https://glimverge.github.io',
+  siteOrigin: 'https://blog.glimverge.com',
   themeConfig: {
     socialLinks: [
       {
