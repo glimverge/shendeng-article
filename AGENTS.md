@@ -19,7 +19,7 @@
 
 - `llms: true`：构建产出 `llms.txt` / `llms-full.txt` 与各页 `.md`；大纲区有「复制 Markdown / 打开 AI」
 - `@rspress/plugin-sitemap`：SEO sitemap（依赖 `siteOrigin`）
-- `@rspress/plugin-rss`：Atom 订阅 `/rss/articles.xml`；文章需 frontmatter `date` 或 `published_at`；Overview 用 `link-rss: articles` 挂发现链接
+- `@rspress/plugin-rss`：Atom 订阅 `/rss/articles.xml`；文章需 frontmatter `date` 或 `published_at`；Overview 用 `link-rss: articles` 挂发现链接；右上角 `socialLinks` 含 RSS 图标（自定义 SVG）
 - `themeConfig.lastUpdated`：页脚显示 Git 最后更新（CI 需 `fetch-depth: 0`）
 - `themeConfig.editLink`：指向 GitHub `docs/` 的「编辑此页」
 
