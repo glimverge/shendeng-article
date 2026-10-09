@@ -25,4 +25,5 @@
 
 - 使用 **Prettier** 格式化 Markdown（`proseWrap: preserve`，避免重排中文段落）
 - 本地检查：`npm run fmt:check`；本地修复：`npm run fmt`
-- CI：`.github/workflows/markdown-format.yml` 会在 push/PR 时自动格式化；同仓库分支有改动时会提交 `style: format markdown`
+- CI：`.github/workflows/autofix.yml`（**workflow 名必须是 `autofix.ci`**）在 push/PR 时跑 `npm run fmt`，再由 [autofix.ci](https://autofix.ci/) App 把修复推回分支
+- 组织已安装 autofix.ci GitHub App；不要再手写 `git commit` / `git push` 做格式修复
