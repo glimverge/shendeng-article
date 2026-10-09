@@ -5,8 +5,6 @@ export default defineConfig({
   title: '神灯',
   description: '神灯文章',
   lang: 'zh',
-  // GitHub Pages project site
-  base: '/shendeng-article/',
   siteOrigin: 'https://glimverge.github.io',
   themeConfig: {
     socialLinks: [
