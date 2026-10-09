@@ -3,10 +3,5 @@
     "text": "Overview",
     "link": "/",
     "activeMatch": "^/$"
-  },
-  {
-    "text": "文章",
-    "link": "/二十分钟写完的代码你敢改一版吗",
-    "activeMatch": "^/二十分钟"
   }
 ]
