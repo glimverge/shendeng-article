@@ -6,6 +6,10 @@ export default defineConfig({
   description: '神灯文章',
   lang: 'zh',
   siteOrigin: 'https://blog.glimverge.com',
+  // Logos from https://github.com/glimverge/design/tree/master/logo
+  logo: '/logo-full-transparent.svg',
+  logoText: '神灯',
+  icon: '/logo-full-transparent.ico',
   themeConfig: {
     socialLinks: [
       {
@@ -16,3 +20,4 @@ export default defineConfig({
     ],
   },
 });
+
