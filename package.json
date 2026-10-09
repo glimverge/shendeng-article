@@ -1,0 +1,25 @@
+{
+  "name": "shendeng-article",
+  "version": "1.0.0",
+  "private": true,
+  "description": "深灯文章 · VitePress + GitHub Pages",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glimverge/shendeng-article.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glimverge/shendeng-article/issues"
+  },
+  "homepage": "https://glimverge.github.io/shendeng-article/",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.43"
+  }
+}
