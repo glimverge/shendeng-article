@@ -1,0 +1,14 @@
+docs/二十分钟写完的代码你敢改一版吗.md
+  h_a57efa94f24ca5 3,25,57,71,85,117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "10df77a9224cf5f05fcb34c497055233a33ab7c0",
+  "prompts": {},
+  "humans": {
+    "h_a57efa94f24ca5": {
+      "author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
