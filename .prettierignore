@@ -7,3 +7,7 @@ package-lock.json
 *.png
 *.jpg
 *.ico
+
+# Local agent / tooling notes — not site content
+.agents
+.workbuddy
