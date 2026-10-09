@@ -15,6 +15,20 @@
 - 构建产物目录：`doc_build/`
 - 常用命令：`npm run docs:dev` / `docs:build` / `docs:preview`
 
+### 已启用能力
+
+- `llms: true`：构建产出 `llms.txt` / `llms-full.txt` 与各页 `.md`；大纲区有「复制 Markdown / 打开 AI」
+- `@rspress/plugin-sitemap`：SEO sitemap（依赖 `siteOrigin`）
+- `@rspress/plugin-rss`：Atom 订阅 `/rss/articles.xml`；文章需 frontmatter `date` 或 `published_at`；Overview 用 `link-rss: articles` 挂发现链接
+- `themeConfig.lastUpdated`：页脚显示 Git 最后更新（CI 需 `fetch-depth: 0`）
+- `themeConfig.editLink`：指向 GitHub `docs/` 的「编辑此页」
+
+### 写文章约定
+
+- 文章 frontmatter 建议带：`title`、`description`、`date`（或 `published_at`）、可选 `summary`（RSS 摘要）
+- 需要进 RSS 的页面必须有日期；Overview 不要加日期
+- 可用 `:::tip` / `:::warning` / `:::note` 等容器突出要点
+
 ## Logo
 
 - 品牌 Logo 来自 https://github.com/glimverge/design/tree/master/logo
