@@ -10,8 +10,11 @@
     "docs:preview": "rspress preview",
     "dev": "rspress dev",
     "build": "rspress build",
-    "preview": "rspress preview"
+    "preview": "rspress preview",
+    "fmt": "prettier --write \"**/*.{md,mdx}\"",
+    "fmt:check": "prettier --check \"**/*.{md,mdx}\""
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/glimverge/shendeng-article.git"
@@ -22,6 +25,7 @@
   },
   "homepage": "https://blog.glimverge.com/",
   "devDependencies": {
-    "@rspress/core": "^2.0.23"
+    "@rspress/core": "^2.0.23",
+    "prettier": "^3.9.9"
   }
 }
