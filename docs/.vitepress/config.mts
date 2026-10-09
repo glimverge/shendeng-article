@@ -5,8 +5,6 @@ export default defineConfig({
   title: '深灯',
   description: '深灯文章',
   lang: 'zh-CN',
-  // GitHub Pages project site: https://glimverge.github.io/shendeng-article/
-  base: '/shendeng-article/',
 
   themeConfig: {
     nav: [
