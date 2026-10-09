@@ -14,3 +14,10 @@
 - 导航 / 侧栏：`docs/_nav.json`、`docs/_meta.json`
 - 构建产物目录：`doc_build/`
 - 常用命令：`npm run docs:dev` / `docs:build` / `docs:preview`
+
+## Logo
+
+- 品牌 Logo 来自 https://github.com/glimverge/design/tree/master/logo
+- Web 资源放在 `docs/public/`（勿提交 `.ai` / `.cdr` 源文件）
+- 导航 Logo：`logo-full-transparent.svg`；站点 icon：`logo-full-transparent.ico`
+
