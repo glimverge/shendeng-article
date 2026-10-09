@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: '深灯',
-  description: '深灯文章',
+  title: '神灯',
+  description: '神灯文章',
   lang: 'zh-CN',
 
   themeConfig: {

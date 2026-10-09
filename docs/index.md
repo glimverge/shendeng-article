@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: 深灯
+  name: 神灯
   text: 文章
   tagline: 关于工程、AI 与认知债的笔记
   actions:
