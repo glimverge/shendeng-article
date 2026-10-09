@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "proseWrap": "preserve",
+  "ignorePatterns": [
+    "node_modules",
+    "doc_build",
+    "package-lock.json",
+    "**/.vitepress",
+    "**/public/**",
+    "*.svg",
+    "*.png",
+    "*.jpg",
+    "*.ico",
+    ".agents",
+    ".workbuddy"
+  ]
+}

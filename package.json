@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "description": "神灯文章 · Rspress + GitHub Pages",
+  "homepage": "https://blog.glimverge.com/",
+  "bugs": {
+    "url": "https://github.com/glimverge/shendeng-article/issues"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glimverge/shendeng-article.git"
+  },
   "type": "module",
   "scripts": {
     "docs:dev": "rspress dev",
@@ -11,21 +20,11 @@
     "dev": "rspress dev",
     "build": "rspress build",
     "preview": "rspress preview",
-    "fmt": "prettier --write \"**/*.{md,mdx}\"",
-    "fmt:check": "prettier --check \"**/*.{md,mdx}\""
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
-
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/glimverge/shendeng-article.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/glimverge/shendeng-article/issues"
-  },
-  "homepage": "https://blog.glimverge.com/",
   "devDependencies": {
     "@rspress/core": "^2.0.23",
-    "prettier": "^3.9.9"
+    "oxfmt": "^0.72.0"
   }
 }
