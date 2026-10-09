@@ -8,10 +8,9 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
       {
-        text: '文章',
-        link: '/二十分钟写完的代码你敢改一版吗',
+        text: '二十分钟写完的代码，你敢改一版吗',
+        link: '/',
       },
     ],
 
@@ -21,7 +20,7 @@ export default defineConfig({
         items: [
           {
             text: '二十分钟写完的代码，你敢改一版吗',
-            link: '/二十分钟写完的代码你敢改一版吗',
+            link: '/',
           },
         ],
       },
